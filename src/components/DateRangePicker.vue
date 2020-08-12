@@ -291,9 +291,9 @@
 
       let startDate = this.dateRange.startDate || this.dateRange[0] || null;
       let endDate = this.dateRange.endDate || this.dateRange[1] || null;
-      data.monthDate = startDate ?new Date(moment(startDate, this.localeData.format))._d: new Date()
+      data.monthDate = startDate ? new Date(moment(startDate, this.localeData.format)._d) : new Date()
       data.nextMonthDate = nextMonth(data.monthDate)
-      data.start = startDate ?new Date(moment(startDate, this.localeData.format)) : null
+      data.start = startDate ? new Date(moment(startDate, this.localeData.format)) : null
       if (this.singleDatePicker) {
         // ignore endDate for singleDatePicker
         data.end = data.start
@@ -504,13 +504,15 @@
           let endDate = nval.endDate || nval[1] || null;  
           this.start = (!!startDate && !this.isClear) ? new Date(moment(startDate, this.localeData.format)) : null
           this.end = (!!endDate && !this.isClear) ? new Date(moment(endDate, this.localeData.format)) : null
+          console.log(this.start, this.end, 'before')
           if (this.isClear) {
             this.start = null
             this.end = null
           } else {
-            this.start = this.dateRange.startDate ? new Date(moment(this.dateRange.startDate, this.localeData.format)) :  new Date(moment(this.dateRange[0], this.localeData.format))            
-            this.end = this.dateRange.endDate ? new Date(moment(this.dateRange.endDate), this.localeData.format) : new Date(moment(this.dateRange[1], this.localeData.format))
+            this.start = this.dateRange.startDate ? new Date(moment(this.dateRange.startDate, this.localeData.format)) :  new Date(moment(this.dateRange[0], this.localeData.format)._d)            
+            this.end = this.dateRange.endDate ? new Date(moment(this.dateRange.endDate, this.localeData.format)._d) : new Date(moment(this.dateRange[1], this.localeData.format)._d)
           }
+          console.log(this.start, this.end, 'after')
         },
         deep: true
       }

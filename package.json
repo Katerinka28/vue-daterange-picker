@@ -1,15 +1,15 @@
 {
-  "name": "vue2-daterange-picker",
+  "name": "vue-daterange-picker",
   "version": "2.3.1",
   "description": "Vue2 date range picker based on https://github.com/dangrossman/bootstrap-daterangepicker (no jQuery)",
   "author": "Kateryna Dmytriieva <katerynadmytriieva28@gmail.com>",
-  "main": "dist/vue2-daterange-picker.umd.min.js",
-  "jsnext:main": "dist/vue2-daterange-picker.umd.min.js",
+  "main": "dist/vue-daterange-picker.umd.min.js",
+  "jsnext:main": "dist/vue-daterange-picker.umd.min.js",
   "private": false,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Innologica/vue2-daterange-picker"
+    "url": "https://github.com/Katerinka28/vue-daterange-picker"
   },
   "files": [
     "dist",
